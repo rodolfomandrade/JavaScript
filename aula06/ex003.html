@@ -12,11 +12,12 @@
     </style>
 </head>
 <body>
-    <h1>Primeiro JavaScript</h1>
+    <h1>Olá, Mundo</h1>
     <script>
-        window.alert("Olá, Mundo!");
-        window.confirm("Está gostando de JS?");
-        window.prompt("Qual é seu nome?");
+        var n1 = window.prompt("Digite um número: ");
+        var n2 = window.prompt("Digite outro número: ");
+        var s = parseInt(n1) + parseInt(n2);
+        window.alert(`A soma entra ${n1} e ${n2} é igual a ${s} `);
     </script>
 </body>
 </html>
