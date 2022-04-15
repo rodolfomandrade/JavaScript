@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Nacionalidade</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        p {
+            font-size: 18px;
+        }
+        input {
+            width: 250px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 8px;
+        }
+        input#botao {
+            font-size: 16px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Estrangeiro ou Nativo</h1>
+    <p>Para qual País você está indo?</p>
+    <input type="destino" id="dest">
+    <p>Em qual País você nasceu?</p>
+    <input type="origem" id="orin">
+    <p></p>
+    <input type="button" value="Calcular Nacionalidade" id="botao" onclick="nacional()">
+    <div id="res"></div>
+
+    <script>
+        var dest = window.document.getElementById("dest")
+        var orin = window.document.querySelector("input#orin")
+
+        function nacional() {
+            if (dest.value == orin.value){
+                res.innerHTML = "Você é Nacional"
+            }else {
+                res.innerHTML = "Você é estrangeiro"
+            }
+        }
+    </script>
+</body>
+</html>
